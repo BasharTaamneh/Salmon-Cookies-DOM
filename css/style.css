@@ -3,4 +3,7 @@ tr,
 th,
 td {
   border: 1px solid;
+  border-color: rgba(0, 0, 255, 0.534);
+  text-align: center;
+  background-color: aqua;
 }
