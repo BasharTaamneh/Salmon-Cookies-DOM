@@ -19,6 +19,7 @@ function Sales(MinCust, MaxCust, AVGcookies, contry) {
 
 Sales.prototype.costPH = function () {
   for (let i = 0; i < hours.length; i++) {
+
     this.NofcostPH.push(random( this.MinCust ,this.MaxCust));
   }
   console.log(this.NofcostPH);
@@ -30,6 +31,13 @@ Sales.prototype.AVGco = function () {
     this.AVGCOOkiPH[i]=(Math.floor(this.NofcostPH[i] * this.AVGcookies));
     this.total +=this.AVGCOOkiPH[i];
   }
+}
+
+  Sales.prototype.AVGco = function () {
+    for (let i = 0; i < hours.length; i++) {
+      this.AVGCOOkiPH[i]=(Math.floor(this.NofcostPH[i] * this.AVGcookies));
+      this.total += this.AVGCOOkiPH[i];
+    }
   console.log("avgcph= " +this.AVGCOOkiPH);
 }
 
@@ -91,6 +99,4 @@ Paris.dailyStats();
 Lima.dailyStats();
 
 console.log(Stores);
-
-//////////////
 
