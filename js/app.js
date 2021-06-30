@@ -1,9 +1,14 @@
 'use strict';
+
+
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+
 let Stores = [];
 let grandTotal=0;
-function random(min,max){
+let hourlyTotalsArray = [];
+let hourlyTotal = 0;
 
+function random(min,max){
   return Math.floor(Math.random() * (max - min+1) + min);
 }
 
@@ -15,6 +20,7 @@ function Sales(MinCust, MaxCust, AVGcookies, contry) {
   this.AVGCOOkiPH = [];
   this.NofcostPH= [];
   this.total = 0;
+  Stores.push(this);
 }
 
 Sales.prototype.costPH = function () {
@@ -84,29 +90,32 @@ Sales.prototype.AVGco = function () {
     
     function fCalc(){
       for(let i = 0; i < hours.length; i++){
-        let hourlyTotal = 0;
-        for(var j = 0; j < Stores.length; j++){
+        for(let j = 0; j < Stores.length; j++){
           hourlyTotal += Stores[j].AVGCOOkiPH[i];
         }
-        grandTotal += hourlyTotal;
+        grandTotal +=hourlyTotal;
         hourlyTotalsArray[i] = hourlyTotal;
       }
+      console.log(hourlyTotal);
+
     }
-    
-    function renderFooter() {
-      var trFoot = document.createElement('tr');
-      var tdElement = document.createElement('td');
+    ///////////////
+/////////////////
+
+    function renderF() {
+      let trFoot = document.createElement('tr');
+      let tdElement = document.createElement('td');
       tdElement.textContent = 'Hourly totals';
       trFoot.append(tdElement);
-      for(var i = 0; i < hourlyTotalsArray.length; i++){
-        var thElement = document.createElement('td');
+      for(let i = 0; i < hourlyTotalsArray.length; i++){
+        let thElement = document.createElement('td');
         thElement.textContent = (hourlyTotalsArray[i]);
         trFoot.append(thElement);
       }
-      var tdTotalFoot = document.createElement('td');
+      let tdTotalFoot = document.createElement('td');
       tdTotalFoot.textContent = (grandTotal);
       trFoot.append(tdTotalFoot);
-      var referenceTable = document.getElementById('footer');
+      let referenceTable = document.getElementById('footer');
       referenceTable.append(trFoot);
     }
     renderH();
@@ -127,4 +136,30 @@ Lima.dailyStats();
 
 console.log(Stores);
 
+
+fCalc();
+renderF();
+
+function addNewStore(event){
+  event.preventDefault();
+  console.log('Let\'s add a new location!');
+
+  let newStore = event.target.newstorename.value;
+  let newMinimumCustomers = event.target.minimumcustomers.value;
+  let newMaximumCustomers = event.target.maximumcustomers.value;
+  let newAverageSales = event.target.averagecookiessold.value;
+
+  let newStoreAdd = new Sales(newMinimumCustomers, newMaximumCustomers, newAverageSales, newStore);
+
+  newStoreAdd.dailyStats();
+
+  let referenceFooter = document.getElementById('footer');
+  referenceFooter.textContent='';
+  grandTotal = 0;
+  fCalc();
+  renderF();
+}
+
+let cookieFormReference = document.getElementById('cookieform');
+cookieFormReference.addEventListener('submit', addNewStore); 
 

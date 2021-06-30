@@ -183,3 +183,11 @@ table{
 
 
 
+form {
+  box-align: center;
+  background-color: antiquewhite;
+  color: #160d02;
+  padding: 20px;
+  font-weight: bolder;
+  width: 1175px;
+}
