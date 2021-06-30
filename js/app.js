@@ -1,7 +1,7 @@
 'use strict';
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 let Stores = [];
-
+let grandTotal=0;
 function random(min,max){
 
   return Math.floor(Math.random() * (max - min+1) + min);
@@ -82,6 +82,33 @@ Sales.prototype.AVGco = function () {
       Table.append(trHead);
     }
     
+    function fCalc(){
+      for(let i = 0; i < hours.length; i++){
+        let hourlyTotal = 0;
+        for(var j = 0; j < Stores.length; j++){
+          hourlyTotal += Stores[j].AVGCOOkiPH[i];
+        }
+        grandTotal += hourlyTotal;
+        hourlyTotalsArray[i] = hourlyTotal;
+      }
+    }
+    
+    function renderFooter() {
+      var trFoot = document.createElement('tr');
+      var tdElement = document.createElement('td');
+      tdElement.textContent = 'Hourly totals';
+      trFoot.append(tdElement);
+      for(var i = 0; i < hourlyTotalsArray.length; i++){
+        var thElement = document.createElement('td');
+        thElement.textContent = (hourlyTotalsArray[i]);
+        trFoot.append(thElement);
+      }
+      var tdTotalFoot = document.createElement('td');
+      tdTotalFoot.textContent = (grandTotal);
+      trFoot.append(tdTotalFoot);
+      var referenceTable = document.getElementById('footer');
+      referenceTable.append(trFoot);
+    }
     renderH();
 
 
@@ -99,4 +126,5 @@ Paris.dailyStats();
 Lima.dailyStats();
 
 console.log(Stores);
+
 
