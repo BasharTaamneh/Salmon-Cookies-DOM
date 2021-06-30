@@ -1,19 +1,160 @@
-}
+
 header div{
-    width: 1130px;
-    height: 300px;
-    background-image: url(http://www.seekgif.com/download/use-this-dark-red-background-14523); background-repeat: repeat;
+   
+    background-image: url(https://thumbs.dreamstime.com/b/sweet-fish-baked-christmas-gingerbread-cookie-wood-background-close-up-yummy-biscuit-decorated-white-icing-205032398.jpg); background-repeat: repeat;
     clear: both;
     border:double; 
     border-width: 5px;
 }
 
-table,
-tr,
-th,
-td {
-  border: 1px solid;
+
+h1 {
+  font-size: 50px;
+  padding: 10px;
+  color: #241302;
+}
+
+h2{
+  font-size:60px;
+  font-weight: bold;
+  text-align: center;
+  color:black;
+  font-family: 'Source Code Pro', monospace;
+  color: #ecf00c;
+  padding:15px;
+}
+
+h3{
+  font-size:30px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'blend';
+  padding: 10px;
+  color: #161311;
+} 
+
+#title {
+ 
+  font-family: 'blend';
+  color: #ca9966;
+  font-size: 40px;
+}
+
+div img{
+  position: absolute;
+  bottom: 400px;
+  right: 90px;
+  transform: rotate(345deg);
+}
+
+nav ul li a {
+  vertical-align: top;
+  font-family: 'Dokdo', cursive;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  padding: 30px;
+  margin-top: 55px;
+  float: right;
+}
+
+body{
+  width:1130px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(https://img5.goodfon.com/wallpaper/nbig/a/ef/pechene-krekery-rybki-rybalka-fon.jpg); background-repeat: repeat;
+}
+
+main ul li{
+  display: inline-block;
+  margin-top: 100px;
+  background-color:rgba(248, 236, 72, 0.479);
+  border:double; 
+  border-width: 3px;
+  content: 1px;
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  color: #7a3507;  
+} 
+
+  
+article{
+  background-color:rgba(169, 214, 231, 0.7);
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  border:double; 
+  border-width: 5px;
+  content: 8px;
+  margin-bottom:50px;
+  margin-top:50px;
+  width:1115px;
+  color: #160f07;
+  padding-bottom: 50px;
+  padding-right:50px;
+} 
+
+
+p{
+  width: 85%;
+  padding-left:100px;
+  font-size: 25px;
+  color: #ffee00;
+}
+
+
+
+main ul li img{
+  width:70%;
+  position: relative;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:30px;
+  padding:10px;
+}
+
+
+
+footer a{
+  color: azure;
+}
+
+
+footer{
+  background-color:rgba(68, 35, 27, 0.7);
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  border:double; 
+  border-width: 5px;
+  content: 8px;
+  margin-top:140px;
+  width:1115px;
+  color: #ca9966;
+  height: 150px;
+} 
+
+table, tr, td {
+  border:solid;
+  font-family: 'Source Code Pro', monospace;
   border-color: rgba(0, 0, 255, 0.534);
   text-align: center;
-  background-color: aqua;
+  background-color: antiquewhite;
+
 }
+
+td{
+  padding: 10px;
+}
+
+table{
+ 
+  color: #271603;
+  background-color: black;
+  font-family: 'blend';
+  padding: 1px;
+  margin-top:25px;
+  margin-bottom:25px;
+}
+
+
+
