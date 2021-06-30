@@ -1,17 +1,27 @@
 
-header div{
-   
-    background-image: url(https://thumbs.dreamstime.com/b/sweet-fish-baked-christmas-gingerbread-cookie-wood-background-close-up-yummy-biscuit-decorated-white-icing-205032398.jpg); background-repeat: repeat;
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+header {
+  background-color:rgba(83, 29, 15, 0.705);
+    width: 100%;
+     background-repeat: repeat;
     clear: both;
     border:double; 
     border-width: 5px;
+    
 }
 
 
 h1 {
   font-size: 50px;
   padding: 10px;
-  color: #241302;
+  color: #000000;
 }
 
 h2{
@@ -20,7 +30,7 @@ h2{
   text-align: center;
   color:black;
   font-family: 'Source Code Pro', monospace;
-  color: #ecf00c;
+  color: #000000;
   padding:15px;
 }
 
@@ -30,7 +40,7 @@ h3{
   text-align: center;
   font-family: 'blend';
   padding: 10px;
-  color: #161311;
+  color: #000000;
 } 
 
 #title {
@@ -39,36 +49,51 @@ h3{
   color: #ca9966;
   font-size: 40px;
 }
-
+header div{
+  position: relative;
+}
 div img{
+  width: 630px;
   position: absolute;
-  bottom: 400px;
-  right: 90px;
+  bottom: 65px;
+  right: 25px;
   transform: rotate(345deg);
 }
 
 nav ul li a {
-  vertical-align: top;
+  /* vertical-align: top; */
+  /* color: #ffffff; */
+  text-decoration: none;
+  display: subgrid;
   font-family: 'Dokdo', cursive;
   color: rgb(255, 255, 255);
   font-size: 25px;
   padding: 30px;
   margin-top: 55px;
-  float: right;
+  /* float: right; */
 }
 
+header a{
+  text-decoration: none;
+  display: subgrid;
+  font-family: 'Dokdo', cursive;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  padding: 30px;
+  margin-top: 20px;
+}
 body{
   width:1130px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(https://img5.goodfon.com/wallpaper/nbig/a/ef/pechene-krekery-rybki-rybalka-fon.jpg); background-repeat: repeat;
+  background-image: url(https://www.desktopbackground.org/download/540x960/2014/04/19/749510_white-light-plain-backgrounds-wallpapers-image-2-puzzle-play_1920x1080_h.jpg); background-repeat: repeat;
 }
 
 main ul li{
   display: inline-block;
   margin-top: 100px;
-  background-color:rgba(248, 236, 72, 0.479);
+  background-color:rgba(226, 57, 6, 0.603);
   border:double; 
   border-width: 3px;
   content: 1px;
@@ -79,7 +104,7 @@ main ul li{
 
   
 article{
-  background-color:rgba(169, 214, 231, 0.7);
+  background-color:rgba(226, 57, 6, 0.603);
   text-align: center;
   font-family: 'Source Code Pro', monospace;
   border:double; 
@@ -98,7 +123,7 @@ p{
   width: 85%;
   padding-left:100px;
   font-size: 25px;
-  color: #ffee00;
+  color: #000000;
 }
 
 
@@ -121,14 +146,14 @@ footer a{
 
 
 footer{
-  background-color:rgba(68, 35, 27, 0.7);
+  background-color:rgba(83, 29, 15, 0.705);
   text-align: center;
   font-family: 'Source Code Pro', monospace;
   border:double; 
-  border-width: 5px;
+  border-width: 100%;
+  width:100%;
   content: 8px;
   margin-top:140px;
-  width:1115px;
   color: #ca9966;
   height: 150px;
 } 
@@ -136,7 +161,7 @@ footer{
 table, tr, td {
   border:solid;
   font-family: 'Source Code Pro', monospace;
-  border-color: rgba(0, 0, 255, 0.534);
+  border-color: rgba(54, 51, 5, 0.349);
   text-align: center;
   background-color: antiquewhite;
 
@@ -148,8 +173,8 @@ td{
 
 table{
  
-  color: #271603;
-  background-color: black;
+  color: #160d02;
+  background-color: rgba(0, 0, 0, 0.493);
   font-family: 'blend';
   padding: 1px;
   margin-top:25px;

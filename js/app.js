@@ -1,37 +1,37 @@
 'use strict';
-
-
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 let Stores = [];
 
-function Sales(MinCust, MaxCust, AVGcookiesPH, contry) {
+function random(min,max){
+
+  return Math.floor(Math.random() * (max - min+1) + min);
+}
+
+function Sales(MinCust, MaxCust, AVGcookies, contry) {
   this.MinCust = MinCust;
   this.MaxCust = MaxCust;
-  this.AVGcookiesPH = AVGcookiesPH;
+  this.AVGcookies = AVGcookies;
   this.contry = contry;
   this.AVGCOOkiPH = [];
   this.NofcostPH= [];
-    this.total = 0;
-  Stores.push(this);
-
+  this.total = 0;
 }
+
 Sales.prototype.costPH = function () {
   for (let i = 0; i < hours.length; i++) {
-    let min = Math.ceil(this.mincost);
-    let max = Math.floor(this.maxcost);
-    let random = Math.floor(Math.random() * (max - min)) + min;
-    this.NofcostPH= [];
-    this.NofcostPH.push(random);
+    this.NofcostPH.push(random( this.MinCust ,this.MaxCust));
   }
   console.log(this.NofcostPH);
 }
 
-  Sales.prototype.AVGcookies = function () {
-    for (let i = 0; i < hours.length; i++) {
-      this.AVGCOOkiPH[i] = Math.floor(this.NofcostPH[i] * this.AVGcookiesPH);
-      this.total += this.AVGCOOkiPH[i];
-    }
+
+Sales.prototype.AVGco = function () {
+  for (let i = 0; i < hours.length; i++) {
+    this.AVGCOOkiPH[i]=(Math.floor(this.NofcostPH[i] * this.AVGcookies));
+    this.total +=this.AVGCOOkiPH[i];
   }
+  console.log("avgcph= " +this.AVGCOOkiPH);
+}
 
     Sales.prototype.render = function () {
       let Table = document.getElementById('table');
@@ -52,7 +52,7 @@ Sales.prototype.costPH = function () {
 
     Sales.prototype.dailyStats = function () {
       this.costPH();
-      this.AVGcookies();
+      this.AVGco();
       this.render();
     }
 
