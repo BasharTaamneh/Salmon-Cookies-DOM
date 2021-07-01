@@ -156,9 +156,21 @@ function addNewStore(event){
   let referenceFooter = document.getElementById('footer');
   referenceFooter.textContent='';
   grandTotal = 0;
+
   fCalc();
   renderF();
+
+ let delel1= event.target.newstorename
+ delel1.value=""
+ let delel2= event.target.minimumcustomers
+ delel2.value=""
+ let delel3= event.target.maximumcustomers
+ delel3.value=""
+ let delel4= event.target.averagecookiessold
+ delel4.value=""
+ 
 }
+
 
 let cookieFormReference = document.getElementById('cookieform');
 cookieFormReference.addEventListener('submit', addNewStore); 
