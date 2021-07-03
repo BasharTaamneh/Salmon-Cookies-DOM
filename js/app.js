@@ -199,13 +199,15 @@ function addNewStore(event) {
 
   let delel1 = event.target.newstorename
   delel1.value = ""
-  let delel2 = event.target.minimumcustomers
-  delel2.value = ""
-  let delel3 = event.target.maximumcustomers
-  delel3.value = ""
-  let delel4 = event.target.averagecookiessold
-  delel4.value = ""
+  let delel2=Number(event.target.minimumcustomers)
+    delel2.value = ""
+    let delel3=Number(event.target.maximumcustomers)
+    delel3.value = ""
+    let delel4= Number(event.target.averagecookiessold)
+    delel4.value = ""
 
+
+  
 }
 
 
