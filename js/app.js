@@ -182,9 +182,9 @@ function addNewStore(event) {
   console.log('Let\'s add a new location!');
 
   let newStore = event.target.newstorename.value;
-  let newMinimumCustomers = event.target.minimumcustomers.value;
-  let newMaximumCustomers = event.target.maximumcustomers.value;
-  let newAverageSales = event.target.averagecookiessold.value;
+  let newMinimumCustomers = Number( event.target.minimumcustomers.value);
+  let newMaximumCustomers = Number( event.target.maximumcustomers.value);
+  let newAverageSales = Number(event.target.averagecookiessold.value);
 
   let newStoreAdd = new Sales(newMinimumCustomers, newMaximumCustomers, newAverageSales, newStore);
 
@@ -199,11 +199,11 @@ function addNewStore(event) {
 
   let delel1 = event.target.newstorename
   delel1.value = ""
-  let delel2=Number(event.target.minimumcustomers)
+  let delel2=event.target.minimumcustomers
     delel2.value = ""
-    let delel3=Number(event.target.maximumcustomers)
+    let delel3=event.target.maximumcustomers
     delel3.value = ""
-    let delel4= Number(event.target.averagecookiessold)
+    let delel4= event.target.averagecookiessold
     delel4.value = ""
 
 
