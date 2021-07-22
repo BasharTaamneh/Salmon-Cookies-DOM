@@ -46,12 +46,6 @@ Sales.prototype.costPH = function () {
 
 
 
-Sales.prototype.AVGco = function () {
-  for (let i = 0; i < hours.length; i++) {
-    this.AVGCOOkiPH[i] = (Math.floor(this.NofcostPH[i] * this.AVGcookies));
-    this.total += this.AVGCOOkiPH[i];
-  }
-}
 
 
 
