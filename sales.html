@@ -23,13 +23,13 @@
             <input id="newstorename" type="text" required/>
 
             <label for="minimumcustomers">Minimum Customers in?</label>
-            <input id="minimumcustomers" type="number" required/>
+            <input id="minimumcustomers" type="number" min="0" required/>
 
             <label for="maximumcustomers">Maximum Customers in?</label>
-            <input id="maximumcustomers" type="number" required/>
+            <input id="maximumcustomers" type="number" min="0" required/>
 
             <label for="averagecookiessold">Average cookie sales?</label>
-            <input id="averagecookiessold" type="number" step="any" required/>
+            <input id="averagecookiessold" type="number" min="0" step="any" required/>
 
             <button id="submit">Submit New Store</button>
             </fieldset>
