@@ -182,8 +182,8 @@ function addNewStore(event) {
   console.log('Let\'s add a new location!');
 
   let newStore = event.target.newstorename.value;
-  let newMinimumCustomers = Number( event.target.minimumcustomers.value);
-  let newMaximumCustomers = Number( event.target.maximumcustomers.value);
+  let newMinimumCustomers = Number(event.target.minimumcustomers.value);
+  let newMaximumCustomers = Number(event.target.maximumcustomers.value);
   let newAverageSales = Number(event.target.averagecookiessold.value);
 
   let newStoreAdd = new Sales(newMinimumCustomers, newMaximumCustomers, newAverageSales, newStore);
@@ -196,18 +196,9 @@ function addNewStore(event) {
 
   fCalc();
   renderF();
-
-  let delel1 = event.target.newstorename
-  delel1.value = ""
-  let delel2=event.target.minimumcustomers
-    delel2.value = ""
-    let delel3=event.target.maximumcustomers
-    delel3.value = ""
-    let delel4= event.target.averagecookiessold
-    delel4.value = ""
+  cookieFormReference.reset()
 
 
-  
 }
 
 
